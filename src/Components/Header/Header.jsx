@@ -1,8 +1,9 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import AppBar from '@mui/material/AppBar'
 const Header = () => {
+  const [mobile, setMobile] = useState(false)
   return (
-    <Appbar>Encabezado</Appbar>
+    <AppBar>Encabezado</AppBar>
   )
 }
 
