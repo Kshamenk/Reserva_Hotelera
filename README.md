@@ -4,3 +4,4 @@
 - Creación del layout principal App.js
 - Enrutar los componentes con React dom
 - Header: displayDesktop(), DisplayMobile()
+- 
