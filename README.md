@@ -3,5 +3,5 @@
 - Limpieza de la plantilla
 - Creación del layout principal App.js
 - Enrutar los componentes con React dom
-- Header: displayDesktop(), DisplayMobile()
-- 
+- Header: displayDesktop(), DisplayTablet()
+- Home Page: DatePicker,Banner, RoomCard
