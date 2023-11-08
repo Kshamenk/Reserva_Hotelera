@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Counter } from "./features/counter/Counter";
+
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
 import SearchPage from "./Components/SearchPage/SearchPage";
@@ -11,8 +11,8 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/search" element={<SearchPage />} />
         <Route path="/"  element={ <Home />} />
+        <Route path="/search" element={<SearchPage />} />
       </Routes>
     </Router>
   );
