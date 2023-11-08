@@ -18,7 +18,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { ThemeProvider } from "@emotion/react";
 import { Link } from "react-router-dom";
 
-const useStyles = makeStyles((theme) => ({
+const useStyle = makeStyles((theme) => ({
   root: {
     position: "sticky",
     top: 0,
@@ -66,7 +66,7 @@ const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false)
 
   const theme = createTheme();
-  const classes = useStyles();
+  const classes = useStyle();
 
   useEffect(()=>{ 
     const responsivness = ()=> setTablet(window.innerWidth < 900)
