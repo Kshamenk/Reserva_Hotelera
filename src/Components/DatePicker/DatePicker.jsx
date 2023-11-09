@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import 'react-date-range/dist/styles.css'
 import 'react-date-range/dist/theme/default.css'
-import { DateRangePicker } from 'react-date-range'
+import { DateRangePicker } from 'react-date-range' 
 import { makeStyles } from '@mui/styles'
 import { ThemeProvider } from '@emotion/react'
 import { Button, CssBaseline, InputBase, Typography, createTheme } from '@mui/material'
@@ -15,6 +15,7 @@ const useStyle = makeStyles((theme) => ({
     position: 'absolute',
     top: '13vh',
     left: '30vw',
+    zIndex: '50',
   },
   tabletRoot: {
     
@@ -41,9 +42,15 @@ const useStyle = makeStyles((theme) => ({
   people:{
     display: "flex",
     justifyContent: "center",
+    alignItems: 'center',
   },
   input:{
-
+    width:"6vw",
+    border: '1px solid #ccc',
+    margin: '0px 2px 2px 0px',
+    padding: '7px 8px',
+    fontSize: '.9rem',
+    lineHeight: '1.6',
   }
 
 }));
