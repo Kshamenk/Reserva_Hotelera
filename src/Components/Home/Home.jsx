@@ -21,7 +21,7 @@ const Home = () => {
     <CssBaseline/>
     <div className={classes.root}>
       <div className={classes.dates}>
-      <DatePicker/>
+      {/* <DatePicker/> */}
       </div>
       <Banner/>
       <div className={classes.section}>

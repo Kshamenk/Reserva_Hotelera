@@ -12,7 +12,7 @@ import {
   Typography,
   createTheme,
 } from "@mui/material";
-import { Toolbar } from "@mui/material";
+import  Toolbar  from "@mui/material/Toolbar";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
 import { ThemeProvider } from "@emotion/react";
@@ -25,11 +25,14 @@ const useStyle = makeStyles((theme) => ({
     backgroundColor: "#fff",
     zIndex: 99,
     width: "100vw",
+    outline: "none",
+    color: 'inherit',
   },
   toolbar: {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+    color: 'inherit'
   },
   logo: {
     height: "30px",
@@ -95,7 +98,7 @@ const Header = () => {
 
 
     return (
-      <Toolbar className={classes.toolbar}>
+      <Toolbar  className={classes.toolbar}>
       <IconButton
         {...{
           edge: "start",
@@ -128,8 +131,8 @@ const Header = () => {
    
 
   const displayDesktop = () => (
-    <ThemeProvider theme={theme}>
-      <Toolbar className={classes.toolbar}>
+    <ThemeProvider out theme={theme}>
+      <Toolbar  className={classes.toolbar}>
         <Link to='/'>
         <img src={logo} className={classes.logo} alt="logo" />
         </Link>
@@ -137,7 +140,7 @@ const Header = () => {
           <InputBase
             fullWidth
             placeholder="Search here ..."
-            className={classes.input}
+            inputProps={{className:classes.input}}
           />
           <SearchIcon />
         </div>
@@ -149,9 +152,12 @@ const Header = () => {
     </ThemeProvider>
   );
   return (
-    <AppBar className={classes.root}>
+    
+        <AppBar  color="inherit"  className={classes.root} >
       {tablet ? displayTablet() : displayDesktop()}
     </AppBar>
+    
+    
   );
 };
 
