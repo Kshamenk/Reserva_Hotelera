@@ -41,6 +41,7 @@ const useStyle = makeStyles((theme) => ({
   center: {
     display: "flex",
     alignItems: "center",
+    justifyContent: "center",
     border: "1px solid lightgray",
     minWidth: "300px",
     borderRadius: "999px",
@@ -50,8 +51,9 @@ const useStyle = makeStyles((theme) => ({
 
   input: {
     fontSize: "1.2rem",
-    padding: "1px 5px 1px 5px",
-    alignContent: "center",
+    padding: "1px px 1px 5px",
+    marginLeft: "30px",
+    
   },
   right: {
     color: "#333",
@@ -140,7 +142,7 @@ const Header = () => {
           <InputBase
             fullWidth
             placeholder="Search here ..."
-            inputProps={{className:classes.input}}
+            className={classes.input}
           />
           <SearchIcon />
         </div>
