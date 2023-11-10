@@ -23,7 +23,7 @@ const useStyle = makeStyles((theme)=>({
       backgroundImage: `url('${backgroundImage}')`,
       backgroundPosition: 'center',
       backgroundSize: 'cover',
-      marginTop: '68px'
+      marginTop: '65px'
   },
   info:{
     backgroundColor:'#000',
@@ -33,7 +33,16 @@ const useStyle = makeStyles((theme)=>({
     borderRadius: '4px',
     position: 'absolute',
     '& button': {
-      marginTop: "30px",
+      marginTop: "20px",
+      color: "#fff",
+      backgroundColor: "rgba(255,103,31)",
+      textTransform: "inherit",
+      fontSize: "1.2rem",
+      fontWeight: "bold",
+    },
+    "& button:hover": {
+        backgroundColor: "#fff",
+        color: "rgba(255,103,31)",
     },
   },
 }))
