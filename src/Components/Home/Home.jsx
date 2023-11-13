@@ -1,4 +1,4 @@
-import {  CssBaseline, createTheme } from '@mui/material';
+import {  CssBaseline, Grid, createTheme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import {Button} from "@mui/material"
 import React, { useState } from 'react'
@@ -6,11 +6,13 @@ import Banner from '../Banner/Banner';
 import RoomCard from '../RoomCard/RoomCard';
 import DatePicker from '../DatePicker/DatePicker';
 import { ThemeProvider } from '@emotion/react';
+import mockData from '../../mockData/mockData';
 
 const useStyle = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
+    margin: '0px 0px 0px 0px',
   },
   dates:{
     display: 'flex',
@@ -50,12 +52,15 @@ const Home = () => {
       </div>
       { showDates && <DatePicker/> }
       <Banner/>
-      <div className={classes.section}>
-        {/* <RoomCard src={} title={} description={}/>
-        <RoomCard src={} title={} description={}/>
-        <RoomCard src={} title={} description={}/>
-        <RoomCard src={} title={} description={}/> */}
-      </div>
+      <Grid container className={classes.section} spacing={3}>
+        {
+          mockData.map(({src,title,description}, index)=>(
+            <Grid item sm='6' md='4' lg='3'>
+              <RoomCard src={src} title={title} description={description} key={index}/>
+          </Grid>
+          ))
+        }
+      </Grid>
     </div>
     </ThemeProvider>
   
