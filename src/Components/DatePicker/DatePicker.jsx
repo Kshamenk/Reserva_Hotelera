@@ -13,14 +13,16 @@ const theme = createTheme()
 const useStyle = makeStyles((theme) => ({
   root: {
     position: 'absolute',
-    top: '13vh',
+    top: '14vh',
     left: '30vw',
     zIndex: '50',
   },
   tabletRoot: {
-    
-    top: '16vh',
-    left: 0,// a ajustar
+    top: '14vh',
+    left: '0vw',
+    position: 'absolute',
+    zIndex: '100',
+    // a ajustar
   },
   inputSection:{
     display: "flex",
@@ -58,8 +60,8 @@ const useStyle = makeStyles((theme) => ({
 
 
 const selectionRange = {
-  startDate: new Date(2023, 11, 8),
-  endDate: new Date(2023, 11, 8),
+  startDate: new Date(2023, 11, 10),
+  endDate: new Date(2023, 11, 10),
   key: 'selection',
 }
 
