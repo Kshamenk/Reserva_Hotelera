@@ -14,6 +14,7 @@ const useStyle = makeStyles((theme) => ({
     flexDirection: "column",
     margin: "8px",
     maxWidth: "1610px",
+    alignSelf: 'center',
     
   },
   dates:{
