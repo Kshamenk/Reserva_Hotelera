@@ -12,13 +12,15 @@ const useStyle = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    margin: '0px 0px 0px 0px',
+    margin: "8px",
+    maxWidth: "1610px",
+    
   },
   dates:{
     display: 'flex',
     flexDirection: 'column',
     backgroundColor: "#aaa",
-    marginTop: "65px",
+    marginTop: "56px",
     '& button' : {
       border: '1px solid #ccc',
       backgroundColor: '#fff',
