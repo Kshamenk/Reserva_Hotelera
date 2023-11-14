@@ -7,6 +7,10 @@ import { ThemeProvider } from '@emotion/react'
 import { Button, CssBaseline, InputBase, Typography, createTheme } from '@mui/material'
 import { People } from '@mui/icons-material'
 import { Link } from 'react-router-dom'
+import {  useSelector } from 'react-redux/es/hooks/useSelector'
+import { useDispatch } from 'react-redux'
+import { selectStart, setStart } from '../../features/startSlice'
+import { selectEnd, setEnd } from '../../features/endSlice'
 
 const theme = createTheme()
 
@@ -58,21 +62,27 @@ const useStyle = makeStyles((theme) => ({
 }));
 
 
-
-const selectionRange = {
-  startDate: new Date(2023, 11, 10),
-  endDate: new Date(2023, 11, 10),
-  key: 'selection',
-}
-
-
 const DatePicker = () => {
   const [isTabletScreen, setIsTabletScreen] = useState(false);
   const classes = useStyle()
-  const handleSelect = () => { } 
+  const dispatch = useDispatch()
+  const start = useSelector(selectStart)
+  const end = useSelector(selectEnd)
+
+  const selectionRange = {
+    startDate: start,
+    endDate: end,
+    key: 'selection',
+  }
+
+
+  const handleSelect = (ranges) => {
+    dispatch(setStart(ranges.selection.startDate.getTime()))
+    dispatch(setEnd(ranges.selection.endDate.getTime()))
+   }  //genera este objeto por si solo 
 
   const handleResize = () => {
-    const isTablet = window.innerWidth <= 899; // Ajusta el valor según tus necesidades
+    const isTablet = window.innerWidth <= 899; 
     setIsTabletScreen(isTablet);
   };
   useEffect(() => {

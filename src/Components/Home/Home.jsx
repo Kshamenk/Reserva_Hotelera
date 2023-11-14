@@ -57,8 +57,8 @@ const Home = () => {
       <Grid container className={classes.section} spacing={3}>
         {
           mockData.map(({src,title,description}, index)=>(
-            <Grid item sm='6' md='4' lg='3'>
-              <RoomCard src={src} title={title} description={description} key={index}/>
+            <Grid item sm={6} md={4} lg={3} key={index} >
+              <RoomCard src={src} title={title} description={description} />
           </Grid>
           ))
         }

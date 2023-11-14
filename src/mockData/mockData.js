@@ -9,6 +9,17 @@ import suite from '../Img/Premiumsuite.jpg'
 
 const mockData = [
     {
+        src: suite,
+        title: 'Our Corner Suite',
+        description:'Discrete and luxurious with butler service',
+        cat: 'room',
+        price: 350,
+        stock: 4,
+        notAvailablestart: new Date(2023, 11, 14).getTime(),
+        notAvailableEnd: new Date(2023, 11, 16).getTime(),
+        
+    },
+    {
         src: indoorpool,
         title: 'Our indoor pool',
         description:'25m long indoor pool with hammocks and sauna',
@@ -23,10 +34,10 @@ const mockData = [
         title: 'Standart room',
         description:'20 sqm room with full amenities',
         cat: 'room',
-        price: 140,
+        price: 160,
         stock: 12,
-        notAvailablestart: new Date(2023, 11, 13).getTime(),
-        notAvailableEnd: new Date(2023, 11, 13).getTime()
+        notAvailablestart: new Date(2023, 11, 20).getTime(),
+        notAvailableEnd: new Date(2023, 11, 21).getTime()
     },
     {
         src: outdoorpool,
@@ -38,42 +49,32 @@ const mockData = [
         title: 'Excecutive room',
         description:'Our business rooms with lounge acces',
         cat: 'room',
-        price: 170,
+        price: 195,
         stock: 6,
-        notAvailablestart: new Date(2023, 11, 13).getTime(),
-        notAvailableEnd: new Date(2023, 11, 13).getTime()
+        notAvailablestart: new Date(2023, 11, 3).getTime(),
+        notAvailableEnd: new Date(2023, 11, 30).getTime()
     },
     {
         src: withbalcony,
         title: 'Rooms with balcony',
         description:'Rooms with amazing sea views',
         cat: 'room',
-        price: 180,
+        price: 225,
         stock: 15,
-        notAvailablestart: new Date(2023, 11, 13).getTime(),
-        notAvailableEnd: new Date(2023, 11, 13).getTime(),
+        notAvailablestart: new Date(2023, 11, 14).getTime(),
+        notAvailableEnd: new Date(2023, 11, 15).getTime(),
     },
     {
         src: juniorsuite,
         title: 'Junior Suite with kitchenette',
         description:'Our Junior Suites are perfect for families',
         cat: 'room',
-        price: 225,
+        price: 255,
         stock: 9,
-        notAvailablestart: new Date(2023, 11, 13).getTime(),
-        notAvailableEnd: new Date(2023, 11, 13).getTime(),
+        notAvailablestart: new Date(2023, 11, 20).getTime(),
+        notAvailableEnd: new Date(2023, 11, 23 ).getTime(),
     },
-    {
-        src: suite,
-        title: 'Our Corner Suite',
-        description:'Discrete and luxurious with butler service',
-        cat: 'room',
-        price: 350,
-        stock: 4,
-        notAvailablestart: new Date(2023, 11, 13).getTime(),
-        notAvailableEnd: new Date(2023, 11, 13).getTime(),
-        
-    },
+    
 
 ];
 
