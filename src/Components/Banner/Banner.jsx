@@ -2,6 +2,7 @@ import { Button, Typography } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import backgroundImage from '../../Img/alexander-kaunas.jpg'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 function Banner() {
@@ -10,7 +11,9 @@ function Banner() {
     <div className={classes.root}>
       <div className={classes.info}>
       <Typography variant='h2' >Plan your getaway ...</Typography>
+      <Link to='/search'>
       <Button  variant='contained'>Check our rooms</Button>
+      </Link>
       </div>
     </div>
   )
