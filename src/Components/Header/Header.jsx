@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AppBar from "@mui/material/AppBar";
-import logo from "../../Img/cutteventslogo.png";
+//import logo from "../../Img/cutteventslogo.png";
+import logo2 from "../../Img/logo cutt white.png"
 import { makeStyles } from "@mui/styles";
 import {
   Avatar,
@@ -32,7 +33,8 @@ const useStyle = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    color: 'inherit'
+    color: 'inherit',
+
   },
   logo: {
     height: "30px",
@@ -120,7 +122,7 @@ const Header = () => {
         <div>{getDrawerChoices()}</div>
       </Drawer>
       <Link to='/'>
-      <img  src={logo} className={classes.logo} alt="logo"/>
+      <img  src={logo2} className={classes.logo} alt="logo"/>
       </Link>
       <div className={classes.right}>
           <Typography>Sign in</Typography>
@@ -136,7 +138,7 @@ const Header = () => {
     <ThemeProvider out theme={theme}>
       <Toolbar  className={classes.toolbar}>
         <Link to='/'>
-        <img src={logo} className={classes.logo} alt="logo" />
+        <img src={logo2} className={classes.logo} alt="logo" />
         </Link>
         <div className={classes.center}>
           <InputBase

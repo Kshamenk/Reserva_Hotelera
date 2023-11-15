@@ -19,7 +19,7 @@ const SearchPage = () => {
   }
   return (
     <div className={classes.root} >
-      <Typography variant='h5' gutterBottom>
+      <Typography variant='h3' gutterBottom>
         Available rooms
       </Typography>
       <div className={classes.chips} >
@@ -36,7 +36,7 @@ const SearchPage = () => {
         }
       </div>
       <div className={classes.selector}>
-        <Typography gutterBottom>Prices</Typography>
+        <Typography  variant='h4'gutterBottom>Prices:</Typography>
         <Slider
           value={value} 
           onChange={handleChange}
@@ -44,7 +44,7 @@ const SearchPage = () => {
           min={100}
           max={400}
           valueLabelDisplay='auto'
-          color='secondary' />
+          color='primary' />
       </div>
       {mockData
       .filter((data)=> data.cat === "room")
@@ -66,7 +66,12 @@ const SearchPage = () => {
 
 const useStyle = makeStyles((theme) => ({
   root: {
-    marginTop: "60px",
+    marginTop: "80px",
+    "& h3": {
+      fontWeight: 'bold',
+       marginLeft: "24px",
+       
+    },
   },
   chips: {
     padding: "8px",
