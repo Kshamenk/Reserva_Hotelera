@@ -1,6 +1,6 @@
 import React from "react";
 
-import './App.css';
+import "./App.css";
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
 import SearchPage from "./Components/SearchPage/SearchPage";
@@ -9,13 +9,13 @@ import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
-    <Router className='App' >
-      <Header/>
+    <Router className="App">
+      <Header />
       <Routes>
-        <Route path="/"  element={ <Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/search" element={<SearchPage />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   );
 }

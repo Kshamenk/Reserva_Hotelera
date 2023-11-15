@@ -1,7 +1,7 @@
-import {createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 export const endSlice = createSlice({
-  name: 'end',
+  name: "end",
   initialState: {
     value: new Date(2023, 11, 14).getTime(),
   },
@@ -13,9 +13,8 @@ export const endSlice = createSlice({
   },
 });
 
-export const { setEnd} = endSlice.actions;
+export const { setEnd } = endSlice.actions;
 
 export const selectEnd = (state) => state.end.value;
-
 
 export default endSlice.reducer;

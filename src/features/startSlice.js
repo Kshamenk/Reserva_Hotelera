@@ -1,7 +1,7 @@
-import {createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 export const startSlice = createSlice({
-  name: 'start',
+  name: "start",
   initialState: {
     value: new Date(2023, 11, 14).getTime(),
   },
@@ -13,9 +13,8 @@ export const startSlice = createSlice({
   },
 });
 
-export const { setStart} = startSlice.actions;
+export const { setStart } = startSlice.actions;
 
 export const selectStart = (state) => state.start.value;
-
 
 export default startSlice.reducer;
