@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '400px',
     height: 'auto',
     borderRadius: '10px',
+    objectFit: "cover"
   },
   number: { 
     fontWeight: '1000',

@@ -3,7 +3,7 @@ import outdoorpool from '../Img/outdoorpool.jpg'
 import bar from '../Img/bar.jpg'
 import excecutive from '../Img/excecutiveRoom.jpg'
 import  standart from '../Img/standartroom.jpg'
-import withbalcony from '../Img/withbalcony.jpg'
+import withbalcony from '../Img/orva-studio-YC8qqp50BdA-unsplash.jpg'
 import juniorsuite from '../Img/juniorsuite.jpg'
 import suite from '../Img/Premiumsuite.jpg'
 
