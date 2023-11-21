@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 //import logo from "../../Img/cutteventslogo.png";
-import logo2 from "../../Img/logo cutt white.png"
+import logo2 from "../../Img/logo cutt white.png";
 import { makeStyles } from "@mui/styles";
 import {
   Avatar,
@@ -13,7 +13,7 @@ import {
   Typography,
   createTheme,
 } from "@mui/material";
-import  Toolbar  from "@mui/material/Toolbar";
+import Toolbar from "@mui/material/Toolbar";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
 import { ThemeProvider } from "@emotion/react";
@@ -27,14 +27,13 @@ const useStyle = makeStyles((theme) => ({
     zIndex: 99,
     width: "100vw",
     outline: "none",
-    color: 'inherit',
+    color: "inherit",
   },
   toolbar: {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    color: 'inherit',
-
+    color: "inherit",
   },
   logo: {
     height: "30px",
@@ -55,7 +54,6 @@ const useStyle = makeStyles((theme) => ({
     fontSize: "1.2rem",
     padding: "1px px 1px 5px",
     marginLeft: "30px",
-    
   },
   right: {
     color: "#333",
@@ -70,75 +68,74 @@ const useStyle = makeStyles((theme) => ({
 
 const Header = () => {
   const [tablet, setTablet] = useState(true);
-  const [drawerOpen, setDrawerOpen] = useState(false)
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   const theme = createTheme();
   const classes = useStyle();
 
-  useEffect(()=>{ 
-    const responsivness = ()=> setTablet(window.innerWidth < 900)
-    responsivness()
-    window.addEventListener('resize',()=>responsivness())
-  },[tablet])
+  useEffect(() => {
+    const responsivness = () => setTablet(window.innerWidth < 900);
+    responsivness();
+    window.addEventListener("resize", () => responsivness());
+  }, [tablet]);
 
   const displayTablet = () => {
-      const handleDrawerOpen = ()=> {
-        setDrawerOpen(true)
-      }
-      const handleDrawerClose = ()=>{
-        setDrawerOpen(false)
-      }
-      const headersData = ['My account', 'Previous bookings', 'Log out']
+    const handleDrawerOpen = () => {
+      setDrawerOpen(true);
+    };
+    const handleDrawerClose = () => {
+      setDrawerOpen(false);
+    };
+    const headersData = ["My account", "Previous bookings", "Log out"];
 
-      const getDrawerChoices = ()=>{
-        return headersData.map((data, index)=> {
-          return(
-            <List key={index}>
-              <ListItem>{data}</ListItem>
-            </List>
-          )
-        })
-      }
-
+    const getDrawerChoices = () => {
+      return headersData.map((data, index) => {
+        return (
+          <List key={index}>
+            <ListItem>{data}</ListItem>
+          </List>
+        );
+      });
+    };
 
     return (
-      <Toolbar  className={classes.toolbar}>
-      <IconButton
-        {...{
-          edge: "start",
-          color: "#ccc",
-          "aria-label": "menu",
-          "aria-haspopup": "true",
-          onClick: handleDrawerOpen,
-        }}
-      >
-        <MenuIcon fontSize="large" />
-      </IconButton>
-      <Drawer {...{
-        anchor: 'left',
-        open: drawerOpen,
-        onClose: handleDrawerClose,
-      }}>
-        <div>{getDrawerChoices()}</div>
-      </Drawer>
-      <Link to='/'>
-      <img  src={logo2} className={classes.logo} alt="logo"/>
-      </Link>
-      <div className={classes.right}>
+      <Toolbar className={classes.toolbar}>
+        <IconButton
+          {...{
+            edge: "start",
+            color: "#ccc",
+            "aria-label": "menu",
+            "aria-haspopup": "true",
+            onClick: handleDrawerOpen,
+          }}
+        >
+          <MenuIcon fontSize="large" />
+        </IconButton>
+        <Drawer
+          {...{
+            anchor: "left",
+            open: drawerOpen,
+            onClose: handleDrawerClose,
+          }}
+        >
+          <div>{getDrawerChoices()}</div>
+        </Drawer>
+        <Link to="/">
+          <img src={logo2} className={classes.logo} alt="logo" />
+        </Link>
+        <div className={classes.right}>
           <Typography>Sign in</Typography>
           <Avatar className={classes.avatar} />
         </div>
-    </Toolbar>
-    )
-  }
-  
-   
+      </Toolbar>
+    );
+  };
 
   const displayDesktop = () => (
     <ThemeProvider out theme={theme}>
-      <Toolbar  className={classes.toolbar}>
-        <Link to='/'>
-        <img src={logo2} className={classes.logo} alt="logo" />
+      <Toolbar className={classes.toolbar}>
+        <Link to="/">
+          <img src={logo2} className={classes.logo} alt="logo" />
         </Link>
         <div className={classes.center}>
           <InputBase
@@ -156,15 +153,10 @@ const Header = () => {
     </ThemeProvider>
   );
   return (
-    
-        <AppBar  color="inherit"  className={classes.root} >
+    <AppBar color="inherit" className={classes.root}>
       {tablet ? displayTablet() : displayDesktop()}
     </AppBar>
-    
-    
   );
 };
-
-
 
 export default Header;
