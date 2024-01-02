@@ -24,7 +24,7 @@ const SearchPage = () => {
       </Typography>
       <div className={classes.chips}>
         {chips.map(({ key, label }) => {
-          let icon = <HighlightOffTwoTone />;
+          let icon = <HighlightOffTwoTone/>;
           return (
             <Chip
               label={label}
@@ -71,6 +71,7 @@ const SearchPage = () => {
 };
 
 const useStyle = makeStyles((theme) => ({
+
   root: {
     marginTop: "80px",
     "& h3": {
@@ -88,5 +89,6 @@ const useStyle = makeStyles((theme) => ({
     width: "400px",
     marginLeft: "24px",
   },
+  
 }));
 export default SearchPage;

@@ -4,7 +4,6 @@ import backgroundImage from '../../Img/alexander-kaunas.jpg'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-
 function Banner() {
   const classes = useStyle()
   return (
