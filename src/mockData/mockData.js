@@ -84,14 +84,12 @@ export const chips = [
 ];
 
 
-
-
-export const chips2rthr = [
-  { key: 0, label: "Cancellation Flexibility" },
-  { key: 1, label: "Standard rooms" },
-  { key: 2, label: "Executive rooms" },
-  { key: 3, label: "Acces to lounge" },
+export const chips2 =  [
+  { key: 0, label: "balcony rooms" },
+  { key: 1, label: "Acces to rooftop" },
+  { key: 2, label: "Suite rooms" },
+  { key: 3, label: "Acces to bar" },
   { key: 4, label: "more filters" },
-];
 
+]
 export default mockData;

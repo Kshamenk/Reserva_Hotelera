@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import AppBar from "@mui/material/AppBar";
-//import logo from "../../Img/cutteventslogo.png";
 import logo2 from "../../Img/logo cutt white.png";
 import { makeStyles } from "@mui/styles";
 import {
